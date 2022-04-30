@@ -25,7 +25,7 @@ Webhook's body, we recommend validating `Signature` header with your secret key.
 
   <CodeBlock lang="js" showLineNumbers>{`const { createHash } = require('crypto'); 
 const payloadJson = JSON.stringify(payload)
-const signature = createHash('sha256').update(payloadJson).digest('hex')`}
+const signature = createHash('sha256', secret).update(payloadJson).digest('hex')`}
   </CodeBlock>
 
   </TabItem>
